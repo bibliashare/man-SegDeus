@@ -274,3 +274,9 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+## Bibliography Databases
+stdRef
+BIBT-Bible
+THEO-Theology
+
