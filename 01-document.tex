@@ -1,0 +1,85 @@
+% !center 124 | frame 124 -f'\%-\% '
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                          Title Page                                                          %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\thispagestyle{empty} % Removes page numbering from the first page
+\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+
+% !center 124 | frame 124 -f'\%-\% '
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           Abstract                                                           %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\begin{abstract}
+    Aqui vai o resumo.
+\end{abstract}
+
+% !center 124 | frame 124 -f'\%-\% '
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           License                                                            %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\section*{Licença}
+
+    \scriptsize\noindent%
+    \begin{minipage}{\columnwidth}
+        \centering\tt
+        \includegraphics[height=6.0mm]{cc/by-nc.pdf}\\[0.5\smallskipamount]
+        {\scriptsize\texttt{https://creativecommons.org/licenses/by-nc/4.0/}}
+    \end{minipage}
+    \normalsize
+
+
+% !center 124 | frame 124 -f'\%-\% '
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                      Table Of Contents                                                       %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\tableofcontents
+
+
+% !center 124 | frame 124 -f'\%-\% '
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                         Introduction                                                         %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\section{Introdução}
+
+    Alguns recursos do modelo incluem citação de versos em bloco, via \verb!\bBlockQuote{Verso}{Loc~1.1}{ARA}!:
+
+        \bBlockQuote{% !j -i12 116
+            Ah! Que grande é aquele dia, e não há outro semelhante! É tempo de angústia para Jacó; ele, porém,  será
+            livre dela.}{Jr~30.7}{ARA}
+
+    Versos também podem ser citados em linha, ao longo de um parágrafo, via  \verb!\bLineQuote{Verso}{Loc~1.1}{ARA}!,  como  em:
+    \bLineQuote{para sempre com o Senhor}{1Ts~4.17}{ARA}.
+
+    Comandos de:
+
+    \begin{itemize}
+        \item \emph{ênfase},            \verb!\emph{ênfase}!,
+        \item \textit{itálico},         \verb!\textit{itálico}!,
+        \item \textbf{negrito},         \verb!\textbf{negrito}!,
+        \item \texttt{typewritter},     \verb!\texttt{typewritter}!,
+        \item \textsl{inclinado},       \verb!\textsl{inclinado}!,
+        \item \textsw{Que (swoosh)},    \verb!\textsw{Que (swoosh)}! e
+        \item \textsc{caixa alta},      \verb!\textsc{caixa alta}!,
+    \end{itemize}
+
+    funcionam melhor ou pior dependendo das fontes selecionadas como \verb!mainfont!, via \verb!\setmainfont!, no preâmbulo.
+
+    O modelo é simples por projeto, para permitir foco no \emph{conteúdo}. Que Deus te abençoe!
+
+
+% !center 124 | frame 124 -f'\%-\% '
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                         Conclusions                                                          %
+%------------------------------------------------------------------------------------------------------------------------------%
+
+\section{Conclusão}
+
+    Conclusão, seguida de elementos pós-textuais.
+
+%-------------------------------------------------------------------------------------------------------------------------------

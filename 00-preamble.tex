@@ -1,0 +1,79 @@
+% !center 124 | frame 124 -f'\%-\% '
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           Packages                                                           %
+%------------------------------------------------------------------------------------------------------------------------------%
+\usepackage[margin=2.0cm,a5paper]{geometry}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage[greek,english,portuges]{babel}   % last becomes the active one
+\usepackage{indentfirst}
+\usepackage{xltxtra} % For the \XeLaTeX logo
+\usepackage[strict]{changepage} % For narrower, normal flowing, paragraphs
+
+% !center 124 | frame 124 -f'\%-\% '
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                            Fonts                                                             %
+%------------------------------------------------------------------------------------------------------------------------------%
+\defaultfontfeatures{
+    Ligatures               = TeX,
+    % Numbers                 = {Lining}, % Lining, Proportional, OldStyle, Uppercase, Monospaced
+}
+
+% Main font choice
+\input{mainfont.tex}
+
+% Sans font choice
+\input{sansfont.tex}
+
+% Mono font choice
+\input{monofont.tex}
+
+% New Font Families
+\input{fontfams.tex}
+
+% Colors as Add-on Font Features
+\newfontfeature{ScriptureColor}{color=C00000FF}
+
+% !center 124 | frame 124 -f'\%-\% '
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           Commands                                                           %
+%------------------------------------------------------------------------------------------------------------------------------%
+\newcommand{\XXX}[1]{\relax}
+%------------------------------------------------------------------------------------------------------------------------------%
+\newcommand{\YA}{%
+    \mbox{%
+        Y\makebox[0pt][l]{\hspace{-0.178em}\raisebox{-0.00ex}{\scalebox{0.30}{E}}}%
+        H\makebox[0pt][l]{\hspace{-0.010em}\raisebox{-0.00ex}{\scalebox{0.30}{O}}}%
+        W\makebox[0pt][l]{\hspace{-0.245em}\raisebox{-0.00ex}{\scalebox{0.30}{A}}}%
+        H%
+    }%
+}
+%------------------------------------------------------------------------------------------------------------------------------%
+\newcommand{\bQuote}[1]{``\textrm{\addfontfeature{ScriptureColor}{#1}}''}
+\newcommand{\bLineQuote}[3]{\bQuote{{#1}} {#2} ({#3})~\cite{{#3}}}
+\newcommand{\bBlockQuoteAft}[3]{%
+    \begin{adjustwidth}{0.1\linewidth}{0.1\linewidth}
+        \parindent 0pt
+        \bQuote{{#1}} ---~{#2} ({#3})~\cite{{#3}}
+    \end{adjustwidth}
+    \vspace*{0.25\baselineskip}
+}
+\newcommand{\bBlockQuote}[3]{%
+    \vspace*{0.25\baselineskip}%
+    \bBlockQuoteAft{{#1}}{{#2}}{{#3}}%
+}
+
+% !center 124 | frame 124 -f'\%-\% '
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           Metadata                                                           %
+%------------------------------------------------------------------------------------------------------------------------------%
+\makeatletter
+\immediate\write18{datelog.pt > \jobname.info}
+\immediate\write18{fontrpt > \jobname.fontinfo}
+\makeatother
+%-------------------------------------------------------------------------------------------------------------------------------
+% Article title
+\title{\textbf{Modelo PrePrint em \XeLaTeX}}
+\author{C.~Naaktgeboren\thanks{\texttt{C.$\,$Naaktgeboren <bibliashare\textcircled{a}gmail.com>}},}
+\date{{\scriptsize\texttt{Compilado em \input{\jobname.info} - Revisão \input{PreprintVersion.tex}}}}
+%-------------------------------------------------------------------------------------------------------------------------------
