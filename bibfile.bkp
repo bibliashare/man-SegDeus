@@ -1,0 +1,53 @@
+@Book{A21,
+  editor    = {de Oliveira, Daniel},
+  publisher = {Vida Nova},
+  title     = {B{í}blia {S}agrada {A}lmeida {S}éculo 21: {A}ntigo e {N}ovo {T}estamento},
+  year      = {2010},
+  address   = {São Paulo, SP, Brasil},
+  edition   = {2{$^a$} Edição Revista e Atualizada conforme o novo acordo ortográfico ({A21})},
+  isbn      = {978-85-275-0396-9},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Book{ARA,
+  publisher = {Sociedade Bíblica do Brasil},
+  title     = {A {Bí}blia {S}agrada},
+  year      = {1993},
+  address   = {Barueri, SP, Brasil},
+  edition   = {Traduzida em {P}ortuguês por {J}oão {F}erreira de {A}lmeida. {R}evista e {A}tualizada, 2{$^a$} Ed.~({ARA})},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Book{ARC,
+  publisher = {Sociedade Bíblica do Brasil},
+  title     = {{A} {Bí}blia {S}agrada {C}ontendo o {V}elho e o {N}ovo {T}estamento},
+  year      = {1995},
+  address   = {Brasília, DF, Brasil},
+  edition   = {Traduzida em {P}ortuguês por {J}oão {F}erreira de {A}lmeida. Edição {R}evista e {C}orrigida ({ARC})},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Book{PESH,
+  publisher = {BV Books Editora},
+  title     = {B{í}blia {P}eshitta em {P}ortuguês},
+  year      = {2018},
+  address   = {Niterói, RJ, Brasil},
+  edition   = {Tradução dos {A}ntigos {M}anuscritos {A}ramaicos ({PESH})},
+  isbn      = {978-85-8158-177-4},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Book{SBL,
+  editor    = {Holmes, Michael W.},
+  publisher = {Society of Biblical Literature and Logos Bible Software},
+  title     = {{SBL} {G}reek {N}ew {T}estament},
+  year      = {2010},
+  edition   = {Copyright {©} 2010 {S}ociety of {B}iblical {L}iterature and {L}ogos {B}ible {S}oftware ({SBL})},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
