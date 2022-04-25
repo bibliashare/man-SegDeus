@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Returns regular file name prefixes ${P} with existing ${P}.{tex,log,pdf} files
+function find_log() {
+    find . -maxdepth 1 -type f -name '*tex' -o -name '*log' -o -name '*pdf' \
+        | sed 's|....$||g;s|^..||g' \
+        | sort \
+        | uniq -c \
+        | grep '^ *3 ' \
+        | sed 's|^ *3 ||g'
+}
+
+function otf_fonts_in_log() {
+    LOG="$(find_log | head -1).log"
+    grep "(fontspec)" ${LOG} \
+        | grep '\[.*\.otf\]' \
+        | sed 's|^.*\(\[.*\.otf\]\).*$|\1|g' \
+        | sed 's|\[||g;s|\]||g' \
+        | sort \
+        | uniq
+}
+
+# IFS=$'\n'
+# for ofont in $(otf_fonts_in_log); do
+#     otfinfo -i $(kpsewhich ${ofont}) | grep Family | cut -c22-
+# done | sort | uniq | paste -s -d'#' | sed 's|#|, |g'
+
+grep -e '^\\set....font' *tex \
+    | sed 's|.*{||g;s|}.*$||g' \
+    | sort \
+    | uniq \
+    | paste -s -d'#' \
+    | sed 's|#|, |g' \
+    | sed 's|$|%|g'
+
