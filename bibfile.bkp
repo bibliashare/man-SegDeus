@@ -30,6 +30,15 @@
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
+@Book{NKJV,
+  publisher = {Thomas Nelson, Inc.},
+  title     = {{H}oly {B}ible, {N}ew {K}ing {J}ames {V}ersion},
+  year      = {1982},
+  url       = {bible.com},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
 @Book{PESH,
   publisher = {BV Books Editora},
   title     = {B{í}blia {P}eshitta em {P}ortuguês},
