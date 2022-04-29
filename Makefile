@@ -68,3 +68,11 @@ ${PREF}.pdf: ${PREF}.tex ${PREF}.info ${PREF}.fontinfo 0*tex PreprintVersion.tex
 	xelatex --enable-write18 ${PREF}.tex
 	xelatex --enable-write18 ${PREF}.tex
 
+${PREF}-2up.pdf: ${PREF}.pdf
+	pdfxup \
+		-b 1 \
+		-m 24pt \
+		-fw 0pt \
+		-o ${PREF}-2up.pdf \
+		${PREF}.pdf
+
